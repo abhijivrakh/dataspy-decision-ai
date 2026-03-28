@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from app.api.routes.upload import router as upload_router
 from app.api.routes.schema import router as schema_router
 from app.api.routes.capabilities import router as capabilities_router
+from app.api.routes.profile import router as profile_router
+from app.api.routes.insights import router as insights_router
+from app.api.routes.narrative import router as narrative_router
 
 app = FastAPI(
     title="DataSpy Decision AI Backend",
@@ -11,6 +14,9 @@ app = FastAPI(
 app.include_router(upload_router, prefix="/api", tags=["Upload"])
 app.include_router(schema_router, prefix="/api", tags=["Schema"])
 app.include_router(capabilities_router, prefix="/api", tags=["Capabilities"])
+app.include_router(profile_router, prefix="/api", tags=["Profile"])
+app.include_router(insights_router, prefix="/api", tags=["Insights"])
+app.include_router(narrative_router, prefix="/api", tags=["Narrative"])
 
 @app.get("/")
 def root():
