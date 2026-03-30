@@ -108,7 +108,7 @@ def analyze_dataset(payload: AnalyzeRequest):
             "preview": df.head(5).fillna("").to_dict(orient="records")
         }
 
-        schema_suggestions = detect_schema(list(df.columns))
+        schema_suggestions = detect_schema(list(df.columns), df=df)
         capabilities = detect_capabilities(schema_suggestions)
         profile = profile_dataframe(df)
 
