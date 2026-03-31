@@ -1,0 +1,6 @@
+date,product,region,revenue,quantity
+2026-01-01,Product A,West,12000,120
+2026-01-02,Product B,East,15000,100
+2026-01-03,Product C,South,9000,80
+2026-01-04,Product A,North,18000,150
+2026-01-05,Product B,West,20000,170
